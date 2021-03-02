@@ -9,5 +9,8 @@ enable_testing()                                    # We have unit tests
 file(GLOB TARGET_SRC "src/*.cpp")
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
+
 add_library(main STATIC ${TARGET_SRC})
+add_executable(exe ${TARGET_SRC})
+target_link_libraries(exe ${TARGET_SRC})
 add_subdirectory(tests)                             # looks for cmakeList in this subdirectory, runs it in a child node build.

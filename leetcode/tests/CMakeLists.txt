@@ -14,10 +14,13 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(googletest)
 find_package(GTest REQUIRED)
 
+
 file(GLOB TESTS_SRC ./*.cpp)              # Source test files
 add_executable(tests ${TESTS_SRC})
 target_link_libraries(tests PUBLIC
+        gmock                             # googlemock is googltest extension ~ly for mocking as you may have guessed.
         gtest_main                        # provided by google and pulls the main program from that lib
-        main
+        main                              # library we are testing (library on higher dir is called main)
         )
 
+option(BUILD_GMOCK "builds gmock subproject" ON)
