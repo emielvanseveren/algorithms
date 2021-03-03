@@ -1,5 +1,5 @@
-#ifndef REVERSEINTEGER_HPP
-#define REVERSEINTEGER_HPP
+#ifndef REVERSE_INTEGER_HPP
+#define REVERSE_INTEGER_HPP
 
 int reverse(int x);
 

@@ -1,5 +1,5 @@
-#ifndef SETMISMATCH_HPP
-#define SETMISMATCH_HPP
+#ifndef SET_MISMATCH_HPP
+#define SET_MISMATCH_HPP
 
 #include <vector>
 
