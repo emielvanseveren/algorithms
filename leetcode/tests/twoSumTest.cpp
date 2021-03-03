@@ -34,5 +34,3 @@ TEST(twoSumHashTable, last){
     std::vector<int> input = {3,2,4};
     ASSERT_THAT(twoSumHashTable(input,6), ElementsAreArray({1,2}));
 }
-
-
