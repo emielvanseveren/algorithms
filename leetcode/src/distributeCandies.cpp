@@ -19,7 +19,10 @@ int distributeCandiesWithBitSet(std::vector<int>&candies){
     return std::min(hash.count(), candies.size() / 2);
 }
 
-// | 0  | 1  | 0  | 0  | 1  | 0 |          bitset.set(2)
 
-// explanation bitset
-// bitset
+/* Short exp bitset solution:
+ * ############################
+ * Working of a bitset<8>   =>  | 0 0 0 0 0 0 0 0 |       => When .set(2) fires the third bit is set from 0 to 1. | 0 0 0 0 0 1 0 0 |
+ * 200 001 (why?)           =>  The input values can be from (-100 000) to 100 000 (given)
+ * cant store negative bits so we add the max value and double the size of the bitset => 200 0001.&
+*/
