@@ -1,5 +1,5 @@
-#ifndef SETMISMATCH_H
-#define SETMISMATCH_H
+#ifndef SETMISMATCH_HPP
+#define SETMISMATCH_HPP
 
 #include <vector>
 
