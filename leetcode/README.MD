@@ -14,5 +14,6 @@ All solutions have google test unit tests.
 |  3  |  [Distribute candies](https://leetcode.com/problems/distribute-candies)                        |  [src](./src/distributeCandies.cpp)            |    easy    |
 |  4  |  [Reverse Integer](https://leetcode.com/problems/reverse-integer)                              |  [src](./src/reverseInteger.cpp)               |    easy    |
 |  5  |  [Missing Number](https://leetcode.com/problems/missing-number)                                |  [src](./src/missingNumber.cpp)                |    easy    |
-|  6  |  [averageOfLevelsInBinaryTree](https://leetcode.com/problems/average-of-levels-in-binary-tree) |  [src](.src/averageOfLevelsInBinaryTree.cpp)   |    easy    |
+|  6  |  [averageOfLevelsInBinaryTree](https://leetcode.com/problems/average-of-levels-in-binary-tree) |  [src](./src/averageOfLevelsInBinaryTree.cpp)  |    easy    |
+|  7  |  [shortEncodingOfWords](https://leetcode.com/problems/short-encoding-of-words)                 |  [src](.src/shortEncodingOfWords.cpp)          |    easy    |
 
