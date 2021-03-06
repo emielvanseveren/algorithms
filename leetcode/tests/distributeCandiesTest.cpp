@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
 #include "distributeCandies.hpp"
-#include <vector>
+#include "vector"
 
 TEST(distributeCandies, types){
     std::vector<int> v ={1,1,2,2,3,3};
