@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
-#include "averageOfLevelsInBinaryTree.hpp"
+#include "averageOfLevelsInBinaryTreeTest.hpp"
 #include "vector"
 
 using namespace testing;
