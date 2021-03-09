@@ -1,7 +1,5 @@
 #include "gtest/gtest.h"
+#include "gmock/gmock.h"
 #include "addOneRowToTree.hpp"
 
-
-TEST(addOneRowToTreeTest, case1)
-TEST(addOneRowToTreeTest, case2)
-
+// TODO: write some decent tests for this

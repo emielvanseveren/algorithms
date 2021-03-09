@@ -18,5 +18,4 @@ All solutions have google test unit tests.
 |  7   |  [shortEncodingOfWords](https://leetcode.com/problems/short-encoding-of-words)                 |  [src](.src/shortEncodingOfWords.cpp)          |    easy    |
 |  8   |  [removePalindromicSubsequences](https://leetcode.com/problems/remove-palindromic-subsequences)|  [src](.src/removePalindromicSubsequences.cpp) |    easy    |
 |  9   |  [designHashMap](https://leetcode.com/problems/design-hashmap)                                 |  [src](.src/designHashMap.cpp)                 |    easy    |
-|  10  |  [Add One Row to Tree](https://leetcode.com/problems/add-one-row-to-tree)                      |  [src](.src/addOneRowToTree.cpp)               |    easy    |
-
+|  10  |  [Add One Row to Tree](https://leetcode.com/problems/add-one-row-to-tree)                      |  [src](.src/addOneRowToTree.cpp)               |    medium  |
