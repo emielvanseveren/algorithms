@@ -17,4 +17,4 @@ All solutions have google test unit tests.
 |  9   |  [Design HashMap](https://leetcode.com/problems/design-hashmap)                                     |  [src](.src/designHashMap.cpp)                 |    easy    |
 |  10  |  [Add One Row to Tree](https://leetcode.com/problems/add-one-row-to-tree)                           |  [src](.src/addOneRowToTree.cpp)               |    medium  |
 |  11  |  [int To Roman](https://leetcode.com/problems/int-to-roman)                                         |  [src](.src/intToRoman.cpp)                    |    easy    |
-|  12  |  [Coin Change](https://leetcode.com/problems/coin-change)                                           |  [src](.src/coinChange.cpp)                    |    easy    |
+|  12  |  [Coin Change](https://leetcode.com/problems/coin-change)                                           |  [src](.src/coinChange.cpp)                    |    hard    |

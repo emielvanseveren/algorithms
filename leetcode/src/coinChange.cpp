@@ -1,43 +1,30 @@
 #include "coinChange.hpp"
 #include "algorithm"
 
-
 /*
     * 1 <= coins.length <= 12
     * 1 <= coins[i] <= 231 - 1
     * 0 <= amount <= 104
-*/
-
-
-/*
- * SOLVE THIS USING DYNAMIC PROGRAMMING AND DIVIDE AND CONQUER *
+    * SOLVE THIS USING DYNAMIC PROGRAMMING AND DIVIDE AND CONQUER. (UNBOUNDED KNAPSACK)
  */
 
-int coinChange(std::vector<int>& coins, int amount){
-    std::sort(coins.begin(), coins.end());
+int coinChange(std::vector<int>& coins, int amount) {
+    int n = coins.size();
+    int dp[n+1][amount+1];
 
-    if(amount==0) return 0;
-    int i = coins.size()-1;
-    int amountOfCoins= 0;
-
-    while(i>=0 && amount){
-        if(coins[i]>amount) {
-            i--;
-            continue;
+    for(int i=0;i<=n;++i)
+    {
+        for(int j=0;j<=amount;++j)
+        {
+            if(j==0)
+                dp[i][j] = 0;
+            else if(i==0)
+                dp[i][j] = 1e5;
+            else if(coins[i-1]>j)
+                dp[i][j] = dp[i-1][j];
+            else
+                dp[i][j] = std::min(1 + dp[i][j-coins[i-1]], dp[i-1][j]);
         }
-
-        int rest = amount % coins[i]; // dit is de rest
-        int times = (amount-rest) / coins[i];
-        amount -= times*coins[i];
-        amountOfCoins += times;
-        i--;
     }
-
-
-
-    if(amount!=0) {
-
-        return coinChange();
-    }
-    return amountOfCoins;
+    return dp[n][amount]>1e4 ? -1:dp[n][amount];
 }
