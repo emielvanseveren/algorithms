@@ -1,3 +1,0 @@
-/home/emiel/algorithms/labs/SortingAlgorithms/build/CMakeFiles/rebuild_cache.dir
-/home/emiel/algorithms/labs/SortingAlgorithms/build/CMakeFiles/edit_cache.dir
-/home/emiel/algorithms/labs/SortingAlgorithms/build/CMakeFiles/main.dir
