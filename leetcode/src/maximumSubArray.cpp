@@ -32,7 +32,7 @@
  */
 
 /** non recursive O(n) */
-int maximumSubArray(std::vector<int>& nums){
+int Solution::maximumSubArray(std::vector<int>& nums){
     // We don't need to iterate over the first element (only one element, so in this case we can set this value to both the max and the sum.)
     int sum = nums[0], max = nums[0];
     for(int i=1; i<nums.size(); i++){
@@ -58,7 +58,7 @@ int maximumSubArray(std::vector<int>& nums){
  */
 
 // l=left, r=right
-int maximumSubArrayDaQ(std::vector<int>& nums, int l, int r){
+int Solution::maximumSubArrayDaQ(std::vector<int>& nums, int l, int r){
     if(l==r) {
         return nums[l];
     }
@@ -73,7 +73,7 @@ int maximumSubArrayDaQ(std::vector<int>& nums, int l, int r){
  *
  *  l=low, m=mid,h=high
  */
-int maximumSubArrayCrossing(std::vector<int>& nums, int l, int m, int r){
+int Solution::maximumSubArrayCrossing(std::vector<int>& nums, int l, int m, int r){
     int sum = 0;
     int lSum = INT_MIN;
 

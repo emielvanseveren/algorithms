@@ -8,7 +8,7 @@
     * SOLVE THIS USING DYNAMIC PROGRAMMING AND DIVIDE AND CONQUER. (UNBOUNDED KNAPSACK)
  */
 
-int coinChange(std::vector<int>& coins, int amount) {
+int Solution::coinChange(std::vector<int>& coins, int amount) {
     int n = coins.size();
     int dp[n+1][amount+1];
 

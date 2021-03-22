@@ -1,6 +1,6 @@
 #include "addOneRowToTree.hpp"
 
-TreeNode* addOneRow(TreeNode *root, int v, int d){
+TreeNode* Solution::addOneRow(TreeNode *root, int v, int d){
     if(d==1){
         return new TreeNode(v,root, nullptr);
     } if(d==2){

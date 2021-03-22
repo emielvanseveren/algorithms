@@ -1,6 +1,8 @@
 #include "gtest/gtest.h"
 #include "designHashMap.hpp"
 
+// TODO: fixture
+
 TEST(designHashMap, start){
     MyHashMap hashMap = MyHashMap(10000);
     hashMap.put(1,1);

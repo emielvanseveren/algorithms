@@ -7,7 +7,10 @@
 
 #include "string"
 
-std::string encode(std::string longUrl);
-std::string decode(std::string shortUrl);
+class Solution {
+public:
+    std::string encode(std::string longUrl);
+    std::string decode(std::string shortUrl);
+};
 
 #endif

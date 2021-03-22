@@ -10,12 +10,12 @@
  *
  */
 
-std::string encode(std::string longUrl){
+std::string Solution::encode(std::string longUrl){
     char b[] = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     std::string base62;
 
 }
 
-std::string decode(std::string shortUrl){
+std::string Solution::decode(std::string shortUrl){
 
 }

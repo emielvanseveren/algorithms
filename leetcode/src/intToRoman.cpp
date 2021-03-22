@@ -10,7 +10,7 @@
  * So a lot of unnecessary preprocessing and memory usage while it can be done in a few loops tackling the edge cases.
  */
 
-std::string intToRoman(int num){
+std::string Solution::intToRoman(int num){
     std::string roman;
     int c = 1;
 

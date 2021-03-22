@@ -3,6 +3,9 @@
 
 #include "string"
 
-bool hasAllCodes(std::string s, int k);
-bool hasAllCodesWithBitSet(std::string s, int k);
+class Solution {
+public:
+    bool hasAllCodes(std::string s, int k);
+    bool hasAllCodesWithBitSet(std::string s, int k);
+};
 #endif

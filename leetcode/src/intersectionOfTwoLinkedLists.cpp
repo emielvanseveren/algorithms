@@ -9,9 +9,9 @@
 
 /*  METHOD 2: visitedNodes (which is n+m)
  *  Although this could be an okay solution, Leetcode requires that the nodes must retain their original structure
- *  after the fucntion returns. Since we change visited flags, it is not ok.
+ *  after the on function returns. Since we change visited flags, it is not ok.
 */
-VisitedNode* getIntersectionNodeWithVisitedNode(VisitedNode *headA, VisitedNode *headB){
+VisitedNode* Solution::getIntersectionNodeWithVisitedNode(VisitedNode *headA, VisitedNode *headB){
     while(headA->next){ // loop over first list and put visited flag on true.
         headA->visited = true;
     }
@@ -27,6 +27,6 @@ VisitedNode* getIntersectionNodeWithVisitedNode(VisitedNode *headA, VisitedNode 
 /* METHOD 3: difference in node counts
 */
 
-Node* getIntersectionNode(Node *headA, Node *headB){
+Node* Solution::getIntersectionNode(Node *headA, Node *headB){
 
 }

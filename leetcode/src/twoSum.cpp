@@ -5,7 +5,7 @@
 /* Brute force approach
  * get element from vector,
 */
-std::vector<int> twoSum(std::vector<int>& nums, int target) {
+std::vector<int> Solution::twoSum(std::vector<int>& nums, int target) {
     for (int i = 0; i < nums.size(); i++) {
             for (int j = i + 1; j < nums.size(); j++) {
                 if (nums[i] + nums[j] == target) {
@@ -43,7 +43,7 @@ std::vector<int> twoSum(std::vector<int>& nums, int target) {
 std::vector<int> twoSumHashTable(std::vector<int>& nums, int target){
     std::unordered_map<int, int> hash;
     for(int i=0;;++i){
-        auto it = hash.find(target - nums[i]);
+        auto it = hash.find(target - nums[i]); // if element is not found the iterator points to end();
         if (it != hash.end())
             return std::vector<int> {it->second, i};
         hash[nums[i]] = i;

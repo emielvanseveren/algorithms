@@ -7,6 +7,9 @@
 
 #include "vector"
 
-int coinChange(std::vector<int>& coins, int amount);
+class Solution {
+public:
+    int coinChange(std::vector<int>& coins, int amount);
+};
 
 #endif

@@ -1,8 +1,7 @@
 #include "removePalindromicSubsequences.hpp"
 #include "string"
 
-int removePalindromeSub(std::string s){
-
+int Solution::removePalindromeSub(std::string s){
     if(!s.length())
         return 0;
     if(isPalindrome(s))
@@ -10,7 +9,7 @@ int removePalindromeSub(std::string s){
     return 2;
 }
 
-bool isPalindrome(std::string s){
+bool Solution::isPalindrome(std::string s){
     int l =0, h=s.length()-1;
 
     while(h>l){

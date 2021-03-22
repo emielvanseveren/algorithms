@@ -1,9 +1,9 @@
-# LeetCode
+# LeetCode problems
 
 ## Testing
-All solutions have google test unit tests.
+All solutions have simple gtest unit tests, based on the provided examples of the problem.
 
-## Problems 
+## Problems  (ids are not correct yet)
 |   #  |                                                                Title                                                                           |                             Solution                              |        category       | Difficulty |
 |------|------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|-----------------------|------------|
 |  1   |  [Two Sum](https://leetcode.com/problems/two-sum)                                                                                              |  [src](./src/twoSum.cpp)                                          |                       |    easy    |
@@ -20,4 +20,4 @@ All solutions have google test unit tests.
 |  12  |  [Coin Change](https://leetcode.com/problems/coin-change)                                                                                      |  [src](.src/coinChange.cpp)                                       |                       |    hard    |
 |  13  |  [Check if a string contains all binary codes of size K](https://leetcode.com/problems/check-if-a-string-contains-all-binary-codes-of-size-k)  |  [src](.src/checkIfAStringContainsAllBinaryCodesOfSizeKTest.cpp)  |                       |    easy    |
 |  14  |  [Encode and decode a tiny url](https://leetcode.com/problems/encode-and-decode-tinyurl)                                                       |  [src](./src/encodeAndDecodeTinyUrl.cpp)                          |                       |    easy    |
-|  15  |  [Maximum subarray](https://leetcode.com/problems/maximum-subarray)                                                                            |  [src](./src/maximumSubarray)                                     |   Divide and conquer  |    easy    |
+|  15  |  [Maximum subarray](https://leetcode.com/problems/maximum-subarray)                                                                            |  [src](./src/maximumSubArray.cpp)                                 |   Divide and conquer  |    Medum   |

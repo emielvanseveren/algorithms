@@ -3,6 +3,9 @@
 
 #include "vector"
 
-std::vector<int> findErrorNums(std::vector<int>&);
+class Solution {
+public:
+    std::vector<int> findErrorNums(std::vector<int>&);
+};
 
 #endif

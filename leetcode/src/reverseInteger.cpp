@@ -7,7 +7,7 @@
  * module 10, the remainder is the number
 */
 
-int reverse(int x){
+int Solution::reverse(int x){
     std::string temp = "";
     bool isNegative;
 

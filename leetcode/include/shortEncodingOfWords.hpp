@@ -8,6 +8,9 @@
 #include "vector"
 #include "string"
 
-int minimumLengthEncoding(std::vector<std::string> &words);
+class Solution {
+public:
+    int minimumLengthEncoding(std::vector<std::string> &words);
+};
 
 #endif

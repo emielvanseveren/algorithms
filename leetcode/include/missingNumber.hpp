@@ -3,6 +3,9 @@
 
 #include "vector"
 
-int missingNumber(std::vector<int>&nums);
+class Solution {
+public:
+    int missingNumber(std::vector<int>&nums);
+};
 
 #endif

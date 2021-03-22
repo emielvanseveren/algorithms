@@ -3,6 +3,10 @@
 
 #include "vector"
 
-int distributeCandies(std::vector<int>&);
+class Solution {
+public:
+    int distributeCandies(std::vector<int>&);
+    int distributeCandiesWithBitSet(std::vector<int>&candies);
+};
 
 #endif

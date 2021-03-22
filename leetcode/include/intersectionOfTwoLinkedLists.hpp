@@ -15,9 +15,12 @@ struct VisitedNode {
     VisitedNode(int x): val(x), next(nullptr), visited(false){}
 };
 
-Node* getIntersectionNode(Node *headA, Node *headB);
-Node* getIntersectionNodeWithVisited(VisitedNode *headA, VisitedNode);
-
-int getLength(Node *head);
+class Solution {
+public:
+    Node* getIntersectionNode(Node *headA, Node *headB);
+    Node* getIntersectionNodeWithVisited(VisitedNode *headA, VisitedNode);
+private:
+    int getLength(Node *head);
+};
 
 #endif

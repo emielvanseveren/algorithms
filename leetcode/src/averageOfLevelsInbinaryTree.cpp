@@ -13,7 +13,7 @@ Output: [3, 14.5, 11]
 Explanation: The average value of nodes on level 0 is 3,  on level 1 is 14.5, and on level 2 is 11. Hence return [3, 14.5, 11].
 */
 
-std::vector<double> averageOfLevelsInBinaryTreeTwoQueues(Node *root){
+std::vector<double> Solution::averageOfLevelsInBinaryTreeTwoQueues(Node *root){
     std::vector<double> avg;
     if(root == nullptr){
         return avg;
@@ -43,7 +43,7 @@ std::vector<double> averageOfLevelsInBinaryTreeTwoQueues(Node *root){
 
 
 // BETTER SOLUTION is to work with a single queue (found this by looking at the faster solutions).
-std::vector<double> averageOfLevelsInBinaryTreeSingleQueue(Node *root){
+std::vector<double> Solution::averageOfLevelsInBinaryTreeSingleQueue(Node *root){
     std::vector<double> avg;
     if(root == nullptr){
         return avg;

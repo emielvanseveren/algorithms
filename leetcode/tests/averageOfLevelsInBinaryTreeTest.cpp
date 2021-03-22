@@ -5,25 +5,30 @@
 
 using namespace testing;
 
-TEST(averageOfLevelsInBinaryTreeTwoQueues, normal){
+struct AverageOfLevelsInBinaryTreeFixture: public ::testing::Test {
+    static void SetUpTestSuite(){
+        std::cout << "\033[1;31m";
+    }
+
+    static void TearDownTestSuite(){}
+    void SetUp(){}
+    void TearDown(){}
+    Solution s_;
+};
+
+TEST_F(AverageOfLevelsInBinaryTreeFixture, handleNormal){
     Node* root = new Node(3, new Node(9), new Node(20));
     root->right->left = new Node(15);
     root->right->right = new Node(7);
-    ASSERT_THAT(averageOfLevelsInBinaryTreeTwoQueues(root), ElementsAreArray<double>({3,14.5,11}));
+    ASSERT_THAT(s_.averageOfLevelsInBinaryTreeTwoQueues(root), ElementsAreArray<double>({3,14.5,11}));
     free(root);
 }
-TEST(averageOfLevelsInBinaryTreeTwoQueues, nullRoot){
+TEST_F(AverageOfLevelsInBinaryTreeFixture, handleNullRoot){
     Node *root = nullptr;
-    ASSERT_THAT(averageOfLevelsInBinaryTreeTwoQueues(root),ElementsAreArray<double>({}));
+    ASSERT_THAT(s_.averageOfLevelsInBinaryTreeTwoQueues(root),ElementsAreArray<double>({}));
 }
 
-TEST(averageOfLevelsInBinaryTreeSingleQueue, normal){
-    Node* root = new Node(3, new Node(9), new Node(20));
-    root->right->left = new Node(15);
-    root->right->right = new Node(7);
-    free(root);
-}
-TEST(averageOfLevelsInBinaryTreeSingleQueue, nullRoot){
+TEST_F(AverageOfLevelsInBinaryTreeFixture, nullRoot){
     Node *root = nullptr;
-    ASSERT_THAT(averageOfLevelsInBinaryTreeSingleQueue(root),ElementsAreArray<double>({}));
+    ASSERT_THAT(s_.averageOfLevelsInBinaryTreeSingleQueue(root),ElementsAreArray<double>({}));
 }

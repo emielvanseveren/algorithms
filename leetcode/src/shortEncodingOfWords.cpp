@@ -23,7 +23,7 @@
  *  - Although the indices are given, we don't need to return them, we are only interested in the count.
  * */
 
-int minimumLengthEncoding(std::vector<std::string> &words){
+int Solution::minimumLengthEncoding(std::vector<std::string> &words){
     std::unordered_set<std::string> s(words.begin(), words.end());
     for(std::string word : words){
         for(int i=1; i<word.length(); i++){

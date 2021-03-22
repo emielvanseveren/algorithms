@@ -12,7 +12,10 @@ struct Node {
     Node(int x, Node *left, Node *right): val(x), left(left), right(right){}
 };
 
-std::vector<double> averageOfLevelsInBinaryTreeTwoQueues(Node* root);
-std::vector<double> averageOfLevelsInBinaryTreeSingleQueue(Node* root);
+class Solution {
+public:
+    std::vector<double> averageOfLevelsInBinaryTreeTwoQueues(Node* root);
+    std::vector<double> averageOfLevelsInBinaryTreeSingleQueue(Node* root);
+};
 
 #endif

@@ -4,6 +4,10 @@
 #include "string"
 
 // here
-std::string intToRoman(int num);
+
+class Solution {
+public:
+    std::string intToRoman(int num);
+};
 
 #endif

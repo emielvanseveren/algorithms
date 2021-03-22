@@ -1,7 +1,7 @@
 #include "missingNumber.hpp"
 #include "vector"
 
-int missingNumber(std::vector<int>&nums){
+int Solution::missingNumber(std::vector<int>&nums){
     int n = nums.size();
     int sum = n*(n+1)/2;
 
