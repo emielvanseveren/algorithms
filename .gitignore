@@ -26,7 +26,13 @@
 *.a
 *.lib
 
+# Cmake
+cmake-build-debug
+
 # Executables
 *.exe
 *.out
 *.app
+
+.idea
+.vscode
