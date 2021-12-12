@@ -25,8 +25,6 @@ pub fn two_sum_hash(nums: Vec<i32>, target: i32) -> Vec<i32> {
     unreachable!("The problem assumes that each input would have exactly one solution.");
 }
 
-fn main() {}
-
 #[cfg(test)]
 mod tests {
     use super::*;
