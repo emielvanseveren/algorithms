@@ -33,6 +33,7 @@ pub fn number_of_steps_bits(num: i32) -> i32 {
     }
     steps
 }
+
 #[cfg(test)]
 mod tests {
     use super::*;
