@@ -1,5 +1,4 @@
-// This can also be solved with dynamic programming but cba.
-pub fn climb_stairs(n: i32) -> i32 {
+pub fn climb_stairs_bottom_up(n: i32) -> i32 {
     // base case
     if n <= 0 {
         return 0;
@@ -30,11 +29,11 @@ mod tests {
 
     #[test]
     fn test_climb_stairs_example_1() {
-        assert_eq!(climb_stairs(2), 2);
+        assert_eq!(climb_stairs_bottom_up(2), 2);
     }
 
     #[test]
     fn test_climb_stairs_example_2() {
-        assert_eq!(climb_stairs(3), 3);
+        assert_eq!(climb_stairs_bottom_up(3), 3);
     }
 }
