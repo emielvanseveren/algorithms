@@ -2,6 +2,7 @@ use anyhow::{bail, Context, Result};
 use serde::{Deserialize, Serialize};
 use std::io::StdoutLock;
 use std::io::Write;
+use uuid7::Uuid;
 
 #[derive(Debug, Clone, Deserialize, Serialize)]
 pub(crate) struct Message {
@@ -14,6 +15,7 @@ pub(crate) struct Message {
 #[derive(Debug, Clone, Deserialize, Serialize)]
 pub(crate) struct Body {
     /// A unique integer identifier
+    #[serde(skip_serializing_if = "Option::is_none")]
     msg_id: Option<usize>,
 
     ///A string identifying the type of message this is
@@ -21,6 +23,7 @@ pub(crate) struct Body {
     ty: Payload,
 
     /// For req/response, the msg_id of the request
+    #[serde(skip_serializing_if = "Option::is_none")]
     in_reply_to: Option<usize>,
 }
 
@@ -41,6 +44,10 @@ pub(crate) enum Payload {
         /// Lists all nodes in the cluster, including the recipient
         node_ids: Vec<String>,
     },
+    Generate {},
+    GenerateOk {
+        id: Uuid,
+    },
     InitOk {},
     Error {
         /// The code is an integer which indicates the type of error which occurred. Maelstrom defines several error types, and you can also invent your own.
@@ -51,7 +58,7 @@ pub(crate) enum Payload {
     },
 }
 
-fn reply(message: &mut Message, output: &mut StdoutLock) -> Result<()> {
+fn send(message: &mut Message, output: &mut StdoutLock) -> Result<()> {
     // swap src and dst
 
     serde_json::to_writer(&mut *output, message).context("serialize response")?;
@@ -93,11 +100,23 @@ fn main() -> Result<()> {
                 },
             }),
             Payload::InitOk {} => bail!("should never receive init_ok"),
+            Payload::Generate {} => Some(Message {
+                src: in_msg.dst,
+
+                dst: in_msg.src,
+                body: Body {
+                    msg_id: None,
+                    in_reply_to: in_msg.body.msg_id,
+                    ty: Payload::GenerateOk { id: uuid7::uuid7() },
+                },
+            }),
+
+            Payload::GenerateOk { .. } => None,
             _ => bail!("unimplemented message type"),
         };
 
         if let Some(mut message) = out_msg {
-            reply(&mut message, &mut stdout)?;
+            send(&mut message, &mut stdout)?;
         }
     }
 
